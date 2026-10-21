@@ -1,0 +1,398 @@
+```html
+<!DOCTYPE html>
+<html lang="vi" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xin chào tôi là Bảo Khang | Portfolio</title>
+    <!-- Sử dụng Tailwind CSS từ CDN để giao diện hiện đại và phong cách -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
+        
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+
+        .gradient-text {
+            background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 50%, #ec4899 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(229, 231, 235, 0.5);
+        }
+
+        .custom-shadow {
+            box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.07);
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased selection:bg-indigo-500 selection:text-white">
+
+    <!-- NAVIGATION BAR -->
+    <nav class="fixed top-0 left-0 right-0 z-50 glass-card transition-all duration-300 shadow-sm">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+            <!-- Logo / Name -->
+            <a href="#" class="font-bold text-xl tracking-tight text-slate-900 flex items-center gap-2">
+                <span class="w-8 h-8 rounded-lg bg-indigo-600 text-white flex items-center justify-center font-black text-sm">BK</span>
+                <span>Bảo Khang</span>
+            </a>
+
+            <!-- Desktop Navigation Links -->
+            <div class="hidden md:flex items-center gap-8 font-medium text-sm text-slate-600">
+                <a href="#about" class="hover:text-indigo-600 transition-colors">Giới thiệu</a>
+                <a href="#skills" class="hover:text-indigo-600 transition-colors">Kỹ năng</a>
+                <a href="#projects" class="hover:text-indigo-600 transition-colors">Dự án</a>
+                <a href="#contact" class="hover:text-indigo-600 transition-colors">Liên hệ</a>
+            </div>
+
+            <!-- CTA Button -->
+            <a href="#contact" class="hidden sm:inline-flex items-center justify-center px-4 py-2 rounded-full bg-slate-900 text-white font-medium text-sm hover:bg-indigo-600 transition-all duration-300 shadow-md hover:shadow-indigo-200">
+                Gửi tin nhắn
+            </a>
+
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-btn" class="md:hidden p-2 rounded-lg text-slate-600 hover:bg-slate-100 focus:outline-none">
+                <i data-lucide="menu" class="w-6 h-6"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Navigation Menu -->
+        <div id="mobile-menu" class="hidden md:hidden border-t border-slate-200 bg-white px-4 pt-2 pb-4 space-y-2">
+            <a href="#about" class="block py-2 text-slate-600 hover:text-indigo-600 font-medium">Giới thiệu</a>
+            <a href="#skills" class="block py-2 text-slate-600 hover:text-indigo-600 font-medium">Kỹ năng</a>
+            <a href="#projects" class="block py-2 text-slate-600 hover:text-indigo-600 font-medium">Dự án</a>
+            <a href="#contact" class="block py-2 text-slate-600 hover:text-indigo-600 font-medium">Liên hệ</a>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section class="pt-32 pb-20 md:pt-40 md:pb-32 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col md:flex-row items-center justify-between gap-12">
+            
+            <!-- Hero Content -->
+            <div class="flex-1 text-center md:text-left">
+                <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-indigo-50 border border-indigo-100 text-indigo-700 text-xs font-semibold mb-6">
+                    <span class="w-2 h-2 rounded-full bg-indigo-600 animate-pulse"></span>
+                    Chào mừng bạn đến với trang cá nhân
+                </div>
+                
+                <!-- TIÊU ĐỀ NỔI BẬT -->
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-slate-900 leading-tight mb-6">
+                    Xin chào tôi là <br class="hidden sm:inline" /><span class="gradient-text">Bảo Khang</span>
+                </h1>
+                
+                <!-- MÔ TẢ NGẮN (Có thể chỉnh sửa tại đây) -->
+                <p class="text-lg text-slate-600 max-w-xl mb-8 mx-auto md:mx-0 leading-relaxed">
+                    Tôi là một nhà phát triển web sáng tạo, đam mê xây dựng các sản phẩm số hiện đại, tối ưu trải nghiệm người dùng và mang lại giá trị thực tế.
+                </p>
+
+                <div class="flex flex-wrap items-center justify-center md:justify-start gap-4">
+                    <a href="#projects" class="px-6 py-3 rounded-full bg-indigo-600 text-white font-semibold hover:bg-indigo-700 transition-all duration-300 shadow-lg shadow-indigo-200 hover:-translate-y-0.5">
+                        Xem dự án của tôi
+                    </a>
+                    <a href="#contact" class="px-6 py-3 rounded-full bg-white text-slate-700 border border-slate-200 font-semibold hover:bg-slate-50 transition-all duration-300 hover:-translate-y-0.5">
+                        Liên hệ hợp tác
+                    </a>
+                </div>
+            </div>
+
+            <!-- HERO AVATAR / ẢNH ĐẠI DIỆN -->
+            <div class="flex-1 flex justify-center w-full max-w-md">
+                <div class="relative">
+                    <!-- Background Decoration Effect -->
+                    <div class="absolute -inset-4 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-3xl blur-2xl opacity-20 transform -rotate-3"></div>
+                    
+                    <div class="relative bg-white p-3 rounded-3xl custom-shadow border border-slate-100">
+                        <!-- 
+                            ======================================================
+                            [HƯỚNG DẪN THAY ẢNH ĐẠI DIỆN]
+                            Thay đổi đường dẫn trong thuộc tính 'src' bên dưới 
+                            bằng đường dẫn URL ảnh của bạn hoặc tên file ảnh 
+                            (Ví dụ: src="images/bao-khang.jpg")
+                            ======================================================
+                        -->
+                        <img 
+                            src="https://placehold.co/400x450/3b82f6/ffffff?text=B%E1%BA%A3o+Khang" 
+                            alt="Ảnh đại diện của Bảo Khang" 
+                            class="w-full h-[380px] sm:h-[420px] object-cover rounded-2xl"
+                            id="user-avatar"
+                        >
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ABOUT ME SECTION -->
+    <section id="about" class="py-20 bg-white border-y border-slate-100">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <h2 class="text-xs font-bold tracking-widest text-indigo-600 uppercase mb-2">Thông tin</h2>
+                <p class="text-3xl font-bold text-slate-900">Giới thiệu bản thân</p>
+                <div class="w-12 h-1 bg-indigo-600 mx-auto mt-4 rounded-full"></div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="space-y-4 text-slate-600 leading-relaxed">
+                    <h3 class="text-2xl font-bold text-slate-900 mb-4">Lập trình viên & Người sáng tạo nội dung số</h3>
+                    <!-- Thay đổi nội dung giới thiệu chi tiết tại đây -->
+                    <p>
+                        Xin chào! Tôi là **Bảo Khang**. Tôi có niềm đam mê mãnh liệt với công nghệ và thiết kế giao diện. Với kinh nghiệm thực chiến qua nhiều dự án lớn nhỏ, tôi luôn hướng tới việc tạo ra những sản phẩm hoàn hảo cả về mặt thị giác lẫn hiệu năng.
+                    </p>
+                    <p>
+                        Phương châm làm việc của tôi là luôn luôn học hỏi, cập nhật các công nghệ mới nhất để giải quyết các bài toán một cách tối ưu và sáng tạo nhất.
+                    </p>
+                </div>
+
+                <!-- Info Grid / Stats -->
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="p-6 bg-slate-50 rounded-2xl border border-slate-100">
+                        <i data-lucide="award" class="w-8 h-8 text-indigo-600 mb-3"></i>
+                        <h4 class="text-2xl font-bold text-slate-900">2+</h4>
+                        <p class="text-sm text-slate-500 font-medium">Năm kinh nghiệm</p>
+                    </div>
+                    <div class="p-6 bg-slate-50 rounded-2xl border border-slate-100">
+                        <i data-lucide="folder-check" class="w-8 h-8 text-indigo-600 mb-3"></i>
+                        <h4 class="text-2xl font-bold text-slate-900">15+</h4>
+                        <p class="text-sm text-slate-500 font-medium">Dự án hoàn thành</p>
+                    </div>
+                    <div class="p-6 bg-slate-50 rounded-2xl border border-slate-100">
+                        <i data-lucide="users" class="w-8 h-8 text-indigo-600 mb-3"></i>
+                        <h4 class="text-2xl font-bold text-slate-900">10+</h4>
+                        <p class="text-sm text-slate-500 font-medium">Khách hàng hài lòng</p>
+                    </div>
+                    <div class="p-6 bg-slate-50 rounded-2xl border border-slate-100">
+                        <i data-lucide="coffee" class="w-8 h-8 text-indigo-600 mb-3"></i>
+                        <h4 class="text-2xl font-bold text-slate-900">500+</h4>
+                        <p class="text-sm text-slate-500 font-medium">Tách cà phê</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SKILLS & PROJECTS SECTION -->
+    <section id="skills" class="py-20 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- SKILLS SECTION -->
+        <div class="mb-24">
+            <div class="text-center max-w-2xl mx-auto mb-12">
+                <h2 class="text-xs font-bold tracking-widest text-indigo-600 uppercase mb-2">Năng lực</h2>
+                <p class="text-3xl font-bold text-slate-900">Kỹ năng chuyên môn</p>
+                <div class="w-12 h-1 bg-indigo-600 mx-auto mt-4 rounded-full"></div>
+            </div>
+
+            <!-- List Kỹ năng (Có thể thay đổi/thêm bớt) -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                <div class="p-5 bg-white rounded-2xl border border-slate-200/80 hover:shadow-md transition-all text-center">
+                    <div class="w-12 h-12 bg-orange-50 text-orange-600 rounded-xl flex items-center justify-center mx-auto mb-3 font-bold">HTML</div>
+                    <h4 class="font-semibold text-slate-800">HTML5 / CSS3</h4>
+                    <p class="text-xs text-slate-500 mt-1">Nền tảng vững chắc</p>
+                </div>
+                <div class="p-5 bg-white rounded-2xl border border-slate-200/80 hover:shadow-md transition-all text-center">
+                    <div class="w-12 h-12 bg-blue-50 text-blue-600 rounded-xl flex items-center justify-center mx-auto mb-3 font-bold">JS</div>
+                    <h4 class="font-semibold text-slate-800">JavaScript</h4>
+                    <p class="text-xs text-slate-500 mt-1">Xử lý logic & ES6+</p>
+                </div>
+                <div class="p-5 bg-white rounded-2xl border border-slate-200/80 hover:shadow-md transition-all text-center">
+                    <div class="w-12 h-12 bg-cyan-50 text-cyan-600 rounded-xl flex items-center justify-center mx-auto mb-3 font-bold">TW</div>
+                    <h4 class="font-semibold text-slate-800">Tailwind CSS</h4>
+                    <p class="text-xs text-slate-500 mt-1">Giao diện Responsive</p>
+                </div>
+                <div class="p-5 bg-white rounded-2xl border border-slate-200/80 hover:shadow-md transition-all text-center">
+                    <div class="w-12 h-12 bg-indigo-50 text-indigo-600 rounded-xl flex items-center justify-center mx-auto mb-3 font-bold">UI</div>
+                    <h4 class="font-semibold text-slate-800">UI/UX Design</h4>
+                    <p class="text-xs text-slate-500 mt-1">Thiết kế tinh tế</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- PROJECTS SECTION -->
+        <div id="projects">
+            <div class="text-center max-w-2xl mx-auto mb-12">
+                <h2 class="text-xs font-bold tracking-widest text-indigo-600 uppercase mb-2">Sản phẩm</h2>
+                <p class="text-3xl font-bold text-slate-900">Dự án nổi bật</p>
+                <div class="w-12 h-1 bg-indigo-600 mx-auto mt-4 rounded-full"></div>
+            </div>
+
+            <!-- List Dự án -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Card Dự án 1 -->
+                <div class="bg-white rounded-2xl overflow-hidden border border-slate-200/80 custom-shadow hover:-translate-y-1 transition-all duration-300">
+                    <!-- 
+                        [THAY ẢNH DỰ ÁN 1 AT SRC]
+                    -->
+                    <img src="https://placehold.co/600x400/e2e8f0/475569?text=Du+An+1" alt="Dự án 1" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <span class="text-xs font-semibold text-indigo-600 uppercase tracking-wider">Website E-Commerce</span>
+                        <h3 class="text-xl font-bold text-slate-900 mt-1 mb-2">Cửa hàng trực tuyến</h3>
+                        <p class="text-slate-600 text-sm mb-4">Giao diện mua sắm hiện đại với tính năng giỏ hàng và thanh toán nhanh chóng.</p>
+                        <a href="#" class="inline-flex items-center text-sm font-semibold text-indigo-600 hover:text-indigo-700">
+                            Xem chi tiết <i data-lucide="arrow-right" class="w-4 h-4 ml-1"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Card Dự án 2 -->
+                <div class="bg-white rounded-2xl overflow-hidden border border-slate-200/80 custom-shadow hover:-translate-y-1 transition-all duration-300">
+                    <!-- 
+                        [THAY ẢNH DỰ ÁN 2 AT SRC]
+                    -->
+                    <img src="https://placehold.co/600x400/e2e8f0/475569?text=Du+An+2" alt="Dự án 2" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <span class="text-xs font-semibold text-indigo-600 uppercase tracking-wider">Mobile Application</span>
+                        <h3 class="text-xl font-bold text-slate-900 mt-1 mb-2">Ứng dụng Quản lý công việc</h3>
+                        <p class="text-slate-600 text-sm mb-4">Ứng dụng giúp người dùng theo dõi tiến độ công việc cá nhân hằng ngày.</p>
+                        <a href="#" class="inline-flex items-center text-sm font-semibold text-indigo-600 hover:text-indigo-700">
+                            Xem chi tiết <i data-lucide="arrow-right" class="w-4 h-4 ml-1"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Card Dự án 3 -->
+                <div class="bg-white rounded-2xl overflow-hidden border border-slate-200/80 custom-shadow hover:-translate-y-1 transition-all duration-300">
+                    <!-- 
+                        [THAY ẢNH DỰ ÁN 3 AT SRC]
+                    -->
+                    <img src="https://placehold.co/600x400/e2e8f0/475569?text=Du+An+3" alt="Dự án 3" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <span class="text-xs font-semibold text-indigo-600 uppercase tracking-wider">Landing Page</span>
+                        <h3 class="text-xl font-bold text-slate-900 mt-1 mb-2">Trang giới thiệu thương hiệu</h3>
+                        <p class="text-slate-600 text-sm mb-4">Thiết kế Landing Page ấn tượng giúp tăng tỉ lệ chuyển đổi người dùng.</p>
+                        <a href="#" class="inline-flex items-center text-sm font-semibold text-indigo-600 hover:text-indigo-700">
+                            Xem chi tiết <i data-lucide="arrow-right" class="w-4 h-4 ml-1"></i>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="py-20 bg-slate-900 text-white relative overflow-hidden">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <h2 class="text-xs font-bold tracking-widest text-indigo-400 uppercase mb-2">Kết nối</h2>
+                <p class="text-3xl font-bold text-white">Liên hệ với Bảo Khang</p>
+                <div class="w-12 h-1 bg-indigo-500 mx-auto mt-4 rounded-full"></div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-12">
+                <!-- Thông tin liên hệ -->
+                <div class="space-y-6">
+                    <h3 class="text-2xl font-bold text-white mb-4">Hãy cùng tạo nên điều tuyệt vời!</h3>
+                    <p class="text-slate-400">Tôi luôn sẵn sàng trao đổi về các dự án mới, ý tưởng sáng tạo hoặc cơ hội hợp tác.</p>
+                    
+                    <div class="space-y-4 pt-4">
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 rounded-full bg-slate-800 flex items-center justify-center text-indigo-400">
+                                <i data-lucide="mail" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs text-slate-400">Email</p>
+                                <!-- Thay Email tại đây -->
+                                <p class="font-medium text-white">baokhang@example.com</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 rounded-full bg-slate-800 flex items-center justify-center text-indigo-400">
+                                <i data-lucide="phone" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs text-slate-400">Số điện thoại</p>
+                                <!-- Thay SĐT tại đây -->
+                                <p class="font-medium text-white">+84 123 456 789</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 rounded-full bg-slate-800 flex items-center justify-center text-indigo-400">
+                                <i data-lucide="map-pin" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs text-slate-400">Địa điểm</p>
+                                <!-- Thay Địa chỉ tại đây -->
+                                <p class="font-medium text-white">TP. Hồ Chí Minh, Việt Nam</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Form gửi tin nhắn -->
+                <form id="contact-form" class="bg-slate-800 p-8 rounded-3xl border border-slate-700/50 space-y-4">
+                    <div>
+                        <label class="block text-sm font-medium text-slate-300 mb-1">Họ và tên</label>
+                        <input type="text" required placeholder="Nguyễn Văn A" class="w-full px-4 py-3 rounded-xl bg-slate-900 border border-slate-700 text-white focus:outline-none focus:border-indigo-500 transition-colors">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-slate-300 mb-1">Email</label>
+                        <input type="email" required placeholder="email@example.com" class="w-full px-4 py-3 rounded-xl bg-slate-900 border border-slate-700 text-white focus:outline-none focus:border-indigo-500 transition-colors">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-slate-300 mb-1">Tin nhắn</label>
+                        <textarea rows="4" required placeholder="Nội dung lời nhắn..." class="w-full px-4 py-3 rounded-xl bg-slate-900 border border-slate-700 text-white focus:outline-none focus:border-indigo-500 transition-colors"></textarea>
+                    </div>
+                    <button type="submit" class="w-full py-3.5 rounded-xl bg-indigo-600 text-white font-semibold hover:bg-indigo-500 transition-colors shadow-lg shadow-indigo-600/30">
+                        Gửi lời nhắn
+                    </button>
+                    <div id="form-message" class="hidden text-center text-sm font-medium text-emerald-400 pt-2">
+                        Cảm ơn bạn! Lời nhắn đã được gửi thành công.
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="py-8 bg-slate-950 border-t border-slate-800 text-center text-slate-500 text-sm">
+        <p>© 2026 Bảo Khang. Tất cả quyền được bảo lưu.</p>
+    </footer>
+
+    <!-- JAVASCRIPT LOGIC -->
+    <script>
+        // Khởi tạo Lucide Icons
+        lucide.createIcons();
+
+        // Xử lý Menu trên thiết bị di động
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Ẩn Mobile Menu khi nhấp vào liên kết
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Xử lý submit form đơn giản (không dùng alert)
+        const contactForm = document.getElementById('contact-form');
+        const formMessage = document.getElementById('form-message');
+
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            formMessage.classList.remove('hidden');
+            contactForm.reset();
+            setTimeout(() => {
+                formMessage.classList.add('hidden');
+            }, 4000);
+        });
+    </script>
+</body>
+</html>
+```
